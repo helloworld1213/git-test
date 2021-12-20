@@ -1,3 +1,8 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World!</text>
-<button size="mini">按钮</button>
+<view>Hello World!</view>
+<view>{{name}}</view>
+<view>{{age}}</view>
+<view wx:for="{{student}}" wx:key="key">{{item.name}}</view>
+<view>当前计数为：{{counter}}</view>
+<button size="mini" bindtap="addClick" >+</button>
+<button size="mini" bindtap="subClick">-</button>
