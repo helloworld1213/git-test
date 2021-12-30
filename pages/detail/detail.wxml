@@ -1,0 +1,5 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<navigator url="../about/about">跳转到about页面</navigator>
+<!-- 从detail返回带数据的代码 -->
+<button bindtap="handleBack">返回home页面</button>

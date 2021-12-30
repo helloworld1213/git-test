@@ -1,3 +1,16 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World!</text>
 <button size="mini">按钮</button>
+
+<!-- 1.页面跳转 -->
+<navigator url="../detail/detail">点击跳转到detail页面</navigator>
+<!-- 2.传递数据 从home传到about-->
+<!-- 数据可以在about.js的onLoad(options)函数中打印options拿到 -->
+<navigator open-type="redirect" url="../about/about?name=张三&age=18">跳转到about页面(向about传递数据)</navigator>
+<!-- 3. 传递数据: 从about传到home-->
+<!-- 从about返回来时,哈哈哈变为hello world -->
+<navigator url="../about/about">跳转到about页面(从about回来时接收数据)</navigator>
+<view>{{title}}</view>
+<!-- 4.通过普通代码来进行跳转 -->
+<!-- 上面是通过navigator标签来进行跳转的,现在我们通过按钮来实现跳转 -->
+<button bindtap="handlePushDetail">点击跳转到detail页面</button>
